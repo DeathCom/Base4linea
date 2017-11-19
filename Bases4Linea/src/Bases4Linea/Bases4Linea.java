@@ -24,6 +24,9 @@ public class Bases4Linea {
 	public static int ficha, fila=6, colum=6;
 	public static int [][] matrix = new int [fila][colum];
 	public static void main(String[] args) {
+		juganddo();
+	}
+	public static void juganddo(){
 		int cont=0; String seleccion="";
 		Scanner scan = new Scanner(System.in);
 		do{
@@ -34,21 +37,21 @@ public class Bases4Linea {
 				System.out.println("");
 			}
 			while(salir.equalsIgnoreCase("i")){
-					System.out.print("Digite columna jugador 1: ");
-					seleccion= scan.next();
-					eleccion(seleccion);
-					jugador1(ficha-1);
-					imprimir();
-					
-					System.out.print("Digite columna jugador 2: ");
-					seleccion= scan.next();
-					eleccion(seleccion);
-					jugador2(ficha-1);
-					imprimir();
-					
-					ganador();
-					cont++;
-					empate(cont);
+				System.out.print("Digite columna jugador 1: ");
+				seleccion=scan.next();
+				eleccion(seleccion);
+				jugador1(ficha-1);
+				imprimir();
+				
+				System.out.print("Digite columna jugador 2: ");
+				seleccion=scan.next();
+				eleccion(seleccion);
+				jugador2(ficha-1);
+				imprimir();
+				
+				ganador();
+				cont++;
+				empate(cont);
 			}
 			
 			if(salir.equalsIgnoreCase("s")){
